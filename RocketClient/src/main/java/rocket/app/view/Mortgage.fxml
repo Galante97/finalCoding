@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rocket.app.view.MortgageController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="467.0" prefWidth="525.0">
+         <children>
+            <TextField fx:id="in_Income" layoutX="277.0" layoutY="48.0" />
+            <TextField fx:id="in_Expenses" layoutX="277.0" layoutY="87.0" />
+            <TextField fx:id="in_HouseCost" layoutX="277.0" layoutY="167.0" />
+            <TextField fx:id="in_CreditScore" layoutX="277.0" layoutY="126.0" />
+            <Label fx:id="income" layoutX="202.0" layoutY="53.0" text="Income" />
+            <Label fx:id="Expenses" layoutX="151.0" layoutY="92.0" text="Monthly Expenses" />
+            <Label fx:id="CreditScore" layoutX="188.0" layoutY="131.0" text="Cedit Score" />
+            <Label fx:id="HouseCost" layoutX="183.0" layoutY="172.0" text="Housing Cost" />
+            <Label fx:id="Term" layoutX="190.0" layoutY="216.0" text="Term" />
+            <ComboBox fx:id="combo_term" layoutX="286.0" layoutY="211.0" onAction="#dropDown" prefWidth="150.0">
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="15" />
+                        <MenuItem mnemonicParsing="false" text="30" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ComboBox>
+            <Label fx:id="out_MortgagePayment" layoutX="286.0" layoutY="272.0" prefHeight="50.0" prefWidth="181.0" text="Mogarge Payment" textAlignment="CENTER" />
+            <Button fx:id="calc_button" layoutX="183.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnCalculatePayment" text="calculate" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
